@@ -31,7 +31,7 @@ const MapCmp = (s: string, t: string): boolean  => {
    mapChars(s, sMap);
    mapChars(t, tMap);
 
-   return sMap.keys.every(key => {
+   return [...sMap.keys].every(key => {
 	  return sMap.get(key) == tMap.get(key);
    });
 };
