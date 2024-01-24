@@ -19,5 +19,16 @@ describe("Two strings.", () => {
 		 false
 	  ];
    });
-   test.todo("Should be anagrams, s and t.");
+   test("Should be anagrams, s and t by sorting and comparing.", () => {
+	  for(let i = 0; i < s.length; i++) {
+		 const cmp = validAnagram.SortCmp(s[i], t[i]);
+		 expect(cmp).toBe(outputs[i]);
+	  }
+   });
+   test("Should be anagrams, s and t by comparing map properties.", () => {
+	  for(let i = 0; i < s.length; i++) {
+		 const cmp = validAnagram.MapCmp(s[i], t[i]);
+		 expect(cmp).toBe(outputs[i]);
+	  }
+   });
 });
