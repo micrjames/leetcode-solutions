@@ -1,6 +1,6 @@
 const { twoSum } = require("../twoSum");
 
-describe("An array.", () => {
+describe("Members of an array.", () => {
    let inputs: number[][];
    let targets: number[];
    let outputs: number[][];
