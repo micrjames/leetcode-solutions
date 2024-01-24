@@ -8,11 +8,25 @@
 
 // a. brute force
 const BF = (nums: number[], target: number): number[] => {
-	return Array(4).fill(0);
+   for(let right = 0; right < nums.length; right++) {
+      for(let left = 0; left < right; left++) {
+         if(nums[left] + nums[right] == target)
+			return [left, right];
+	  }
+   }
 };
 
 // b. store in Map and compute difference
+const { YAMap } = require("../YAMap/YAMap");
 const MapDiff = (nums: number[], target: number): number[] => {
-	return Array(4).fill(0);
+   const map = new YAMap();
+   let difference: number;
+   const ret = nums.flatMap((num, i) => {
+	  difference = target - num;
+	  if(map.has(difference))
+		 return [map.get(difference), i]
+	  map.set(num, i);
+   });
+   return ret.filter(num => num != undefined);
 };
 exports.twoSum = { BF, MapDiff};
