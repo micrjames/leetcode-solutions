@@ -1,34 +1,20 @@
-const { validAnagram } = require("../validAnagram");
+const { prodExcSelf } = require("../prodExcSelf");
 
-describe("Two strings.", () => {
-   let s: string[];
-   let t: string[];
-   let outputs: boolean[];
+describe("An array of numbers.", () => {
+   let inputs: number[][];
+   let outputs: number[][];
 
    beforeAll(() => {
-	  s = [
-		"anagram",
-		"rat"
-	  ];
-	  t = [
-		 "nagaram",
-		 "car"
+	  inputs = [
+		 [1, 2, 3, 4],
+		 [-1, 1, 0, -3, 3]
 	  ];
 	  outputs = [
-		 true,
-		 false
+		 [24, 12, 8, 6],
+		 [0, 0, 9, 0, 0]
 	  ];
+
    });
-   test("Should be anagrams, s and t by sorting and comparing.", () => {
-	  for(let i = 0; i < s.length; i++) {
-		 const cmp = validAnagram.SortCmp(s[i], t[i]);
-		 expect(cmp).toBe(outputs[i]);
-	  }
-   });
-   test("Should be anagrams, s and t by comparing map properties.", () => {
-	  for(let i = 0; i < s.length; i++) {
-		 const cmp = validAnagram.MapCmp(s[i], t[i]);
-		 expect(cmp).toBe(outputs[i]);
-	  }
-   });
+   test.todo("Should contain as elements products of other elements.");
+   test.todo("Should contain as elements products of other elements, computed in place.");
 });

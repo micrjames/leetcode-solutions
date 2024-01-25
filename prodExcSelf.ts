@@ -1,46 +1,16 @@
-// 217. Contains Duplicate
-// Given an intger array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
-// a. Brute Force
+// 238. Product Except Self
+// Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].
 
-const BF = (nums: number[]): boolean => {
-   for(let right = 0; right < nums.length; right++) {
-      for(let left = 0; left < right; left++) {
-	     const isDuplicate = nums[left] === nums[right];
-		 if(isDuplicate) return true;
-	  }
-   }
-   return false;
+// Must run in O(n) time and without using the division operation.
+
+// a. Compare 
+
+const Cmp = (nums: number[]): number[] => {
 };
 
-//	b. Sort & compare
+//	b. Compare in Place
 
-const SortCmp = (nums: number[]): boolean => {
-   nums.sort((a, b) => a - b);
-
-   for(let curr = 0; curr < (nums.length-1); curr++) {
-	   const isDuplicate = nums[curr] === nums[curr+1];
-	   if(isDuplicate) return true;
-   }
-
-   return false;
-};
-//	c. HashSet &compare
-const { YASet } = require("../YASet/YASet");
-
-const SetCmp = (nums: number[]): boolean => {
-   const numsSet = new YASet();
-   /*
-   nums.forEach(num => {
-	  numsSet.add(num);
-   });
-   return numsSet.size !== nums.length;
-   */
-   for(const num of nums) {
-	  if(numsSet.has(num)) return true;
-
-	  numsSet.add(num);
-   }
-   return false;
+const CmpInPlace = (nums: number[]): number[] => {
 };
 
-exports.containsDuplicate = { BF, SortCmp, SetCmp };
+exports.prodExcSelf = { Cmp, CmpInPlace };
