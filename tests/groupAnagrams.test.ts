@@ -1,19 +1,19 @@
-const { groupAnagrams } = require("../groupAnagrams");
+const { groupAnagrams } = require("../arrays&hashing/groupAnagrams");
 
 describe("An array of strings.", () => {
    let inputs: string[][];
-   let outputs: string[][];
+   let outputs: string[][][];
 
    beforeAll(() => {
 	  inputs = [
-		 [“eat”, “tea”, “tan”, “ate”, “nat”, “bat”],
-		 [“”],
-		 [“a”]
+		 ["eat", "tea", "tan", "ate", "nat", "bat"],
+		 [""],
+		 ["a"]
 	  ];
 	  outputs = [
-		 [[“bat”], [“nat”, “tan”], [“ate”, “eat”, “tea”]],
-		 [[“”]],
-		 [[“a”]]
+		 [["bat"], ["nat", "tan"], ["ate", "eat", "tea"]],
+		 [[""]],
+		 [["a"]]
 	  ];
    });
    test.todo("Should group anagrams by sorting and comparing.");

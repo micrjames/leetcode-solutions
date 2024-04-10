@@ -17,7 +17,7 @@ const BF = (nums: number[], target: number): number[] => {
 };
 
 // b. store in Map and compute difference
-const { YAMap } = require("../YAMap/YAMap");
+const { YAMap } = require("../../YAMap/YAMap");
 const MapDiff = (nums: number[], target: number): number[] => {
    const map = new YAMap();
    let difference: number;

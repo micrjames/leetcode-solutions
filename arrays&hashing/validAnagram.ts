@@ -11,7 +11,7 @@ const SortCmp = (s: string, t: string): boolean  => {
 };
 
 // b. map & compare
-const { YAMap } = require("../YAMap/YAMap");
+const { YAMap } = require("../../YAMap/YAMap");
 const mapChars = (str: string, map: typeof YAMap) => {
    for(const c of str) {
 	  if(map.has(c)) {

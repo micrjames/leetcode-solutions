@@ -25,7 +25,7 @@ const SortCmp = (nums: number[]): boolean => {
    return false;
 };
 //	c. HashSet &compare
-const { YASet } = require("../YASet/YASet");
+const { YASet } = require("../../YASet/YASet");
 
 const SetCmp = (nums: number[]): boolean => {
    const numsSet = new YASet();

@@ -1,4 +1,4 @@
-const { containsDuplicate } = require("../containsDuplicate");
+const { containsDuplicate } = require("../arrays&hashing/containsDuplicate");
 const { Range } = require("../../Range/Range");
 
 describe("An array.", () => {

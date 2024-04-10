@@ -1,4 +1,4 @@
-const { prodExcSelf } = require("../prodExcSelf");
+const { prodExcSelf } = require("../arrays&hashing/prodExcSelf");
 
 describe("An array of numbers.", () => {
    let inputs: number[][];
