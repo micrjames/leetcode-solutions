@@ -15,6 +15,8 @@ describe("An array of numbers.", () => {
 	  ];
 
    });
-   test.todo("Should contain as elements products of other elements.");
-   test.todo("Should contain as elements products of other elements, computed in place.");
+   test.failing("Should contain as elements products of other elements.", () => {
+   });
+   test.failing("Should contain as elements products of other elements, computed in place.", () => {
+   });
 });
