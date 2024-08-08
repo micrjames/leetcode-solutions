@@ -1,28 +1,36 @@
 import { groupAnagrams } from "../arrays&hashing/groupAnagrams";
+import { Range } from "../../range/range";
 
 describe("An array of strings.", () => {
    let inputs: string[][];
    let outputs: string[][][];
+   let inputRange: number[];
 
    beforeAll(() => {
 	  inputs = [
-		 // ["eat", "tea", "tan", "ate", "nat", "bat"],
-		 ["eat", "tea", "tan", "ate", "nat"],
+		 ["eat", "tea", "tan", "ate", "nat", "bat"],
+		 // ["eat", "tea", "tan", "ate", "nat"],
 		 // 5 + 4 + 3 + 2 + 1 = 15.
 		 [""],
-		 ["a"]
+		 ["a"],
+		 []
 	  ];
 	  outputs = [
-		 // [["bat"], ["nat", "tan"], ["ate", "eat", "tea"]],
-		 [["eat", "tea", "ate"], ["tan", "nat"]],
+		 [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]],
 		 [[""]],
-		 [["a"]]
+		 [["a"]],
+		 []
 	  ];
-	  console.log(groupAnagrams.SortCmp(inputs[0]));
+
+	  inputRange = [...new Range(inputs.length)];
    });
-   test("Should group anagrams by sorting and comparing.", () => {
-	  expect(groupAnagrams.SortCmp(inputs[0])).toEqual(outputs[0]);
+   describe("Grouping Anagrams by sorting and comparing", () => {
+	  test("Should have the correct output.", () => {
+		 for(const it of inputRange)
+			expect(groupAnagrams.SortCmp(inputs[it])).toEqual(outputs[it]);
+	  });
    });
-   test.todo("Should group anagrams by comparing map properties.");
-		 // groupAnagrams.MapCmp(str[i]);
+   describe("Should group anagrams by comparing map properties.", () => {
+	  test.todo("Should have the correct output.");
+   });
 });
