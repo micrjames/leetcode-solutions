@@ -1,9 +1,12 @@
-const { containsDuplicate } = require("../arrays&hashing/containsDuplicate");
-const { Range } = require("../../Range/Range");
+import { containsDuplicate } from "../arrays&hashing/containsDuplicate";
+import { Range } from "../../range/range";
 
 describe("An array.", () => {
-   const arr = [...new Range(5)];
-   arr[2] = 1;
+   let arr: number[] = [];
+   beforeAll(() => {
+	  arr = [...new Range(5)];
+	  arr[2] = 1;
+   });
    test("Should contain a duplicate value by brute force comparison.", () => {
 	   expect(containsDuplicate.BF(arr)).toBeTruthy();
    });

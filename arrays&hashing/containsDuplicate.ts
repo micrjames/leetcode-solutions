@@ -1,3 +1,5 @@
+import { utils } from "../utils/utils";
+
 // 217. Contains Duplicate
 // Given an intger array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 // a. Brute Force
@@ -15,7 +17,7 @@ const BF = (nums: number[]): boolean => {
 //	b. Sort & compare
 
 const SortCmp = (nums: number[]): boolean => {
-   nums.sort((a, b) => a - b);
+   nums = utils.sortNums(nums);
 
    for(let curr = 0; curr < (nums.length-1); curr++) {
 	   const isDuplicate = nums[curr] === nums[curr+1];
@@ -25,7 +27,7 @@ const SortCmp = (nums: number[]): boolean => {
    return false;
 };
 //	c. HashSet &compare
-const { YASet } = require("../../YASet/YASet");
+import { YASet } from "../../YASet/YASet";
 
 const SetCmp = (nums: number[]): boolean => {
    const numsSet = new YASet();
@@ -43,4 +45,4 @@ const SetCmp = (nums: number[]): boolean => {
    return false;
 };
 
-exports.containsDuplicate = { BF, SortCmp, SetCmp };
+export const containsDuplicate = { BF, SortCmp, SetCmp };

@@ -1,4 +1,4 @@
-const { validAnagram } = require("../arrays&hashing/validAnagram");
+import { validAnagram } from "../arrays&hashing/validAnagram";
 
 describe("Two strings.", () => {
    let s: string[];

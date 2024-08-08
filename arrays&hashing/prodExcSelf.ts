@@ -6,11 +6,13 @@
 // a. Compare 
 
 const Cmp = (nums: number[]): number[] => {
+   return Array<number>();
 };
 
 //	b. Compare in Place
 
 const CmpInPlace = (nums: number[]): number[] => {
+   return Array<number>();
 };
 
-exports.prodExcSelf = { Cmp, CmpInPlace };
+export const prodExcSelf = { Cmp, CmpInPlace };

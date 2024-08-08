@@ -1,3 +1,5 @@
+import { utils } from "../utils/utils";
+
 // 242. Valid Anagram
 // Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
@@ -5,19 +7,18 @@
 
 // a. sort & compare
 const SortCmp = (s: string, t: string): boolean  => {
-   const sSorted = s.split("").sort().join();
-   const tSorted = t.split("").sort().join();
+   const sSorted = utils.sortStrtoArr(s);
+   const tSorted = utils.sortStrtoArr(t);
    return sSorted == tSorted;
 };
 
 // b. map & compare
-const { YAMap } = require("../../YAMap/YAMap");
-const mapChars = (str: string, map: typeof YAMap) => {
+import { YAMap } from "../../YAMap/YAMap";
+const mapChars = (str: string, map: YAMap) => {
    for(const c of str) {
 	  if(map.has(c)) {
 		 map.set(c, 1 + map.get(c));
-	  }
-	  else {
+	  } else {
 		 map.set(c, 1);
 	  }
    }
@@ -36,4 +37,4 @@ const MapCmp = (s: string, t: string): boolean  => {
    });
 };
 
-exports.validAnagram = { SortCmp, MapCmp };
+export const validAnagram = { SortCmp, MapCmp };

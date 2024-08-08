@@ -1,4 +1,4 @@
-const { twoSum } = require("../arrays&hashing/twoSum");
+import { twoSum } from "../arrays&hashing/twoSum";
 
 describe("Members of an array.", () => {
    let inputs: number[][];

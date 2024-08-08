@@ -17,7 +17,8 @@ const BF = (nums: number[], target: number): number[] => {
 };
 
 // b. store in Map and compute difference
-const { YAMap } = require("../../YAMap/YAMap");
+import { YAMap } from "../../YAMap/YAMap";
+
 const MapDiff = (nums: number[], target: number): number[] => {
    const map = new YAMap();
    let difference: number;
@@ -29,4 +30,5 @@ const MapDiff = (nums: number[], target: number): number[] => {
    });
    return ret.filter(num => num != undefined);
 };
-exports.twoSum = { BF, MapDiff};
+
+export const twoSum = { BF, MapDiff};

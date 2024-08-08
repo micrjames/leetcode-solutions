@@ -1,4 +1,4 @@
-const { prodExcSelf } = require("../arrays&hashing/prodExcSelf");
+import { prodExcSelf } from "../arrays&hashing/prodExcSelf";
 
 describe("An array of numbers.", () => {
    let inputs: number[][];
@@ -15,8 +15,6 @@ describe("An array of numbers.", () => {
 	  ];
 
    });
-   test.failing("Should contain as elements products of other elements.", () => {
-   });
-   test.failing("Should contain as elements products of other elements, computed in place.", () => {
-   });
+   test.todo("Should contain as elements products of other elements.");
+   test.todo("Should contain as elements products of other elements, computed in place.");
 });
