@@ -1,4 +1,6 @@
 import { utils } from "../utils/utils";
+import { Range } from "../../range/range";
+import { YAMap } from "../../YAMap/YAMap";
 
 // 49. Group Anagrams
 // Given an array of strings strs, group the anagrams together. You can return the answer in any order.
@@ -34,7 +36,20 @@ const SortCmp = (strs: string[]): string[][] => {
 
 // b. Map 
 const MapCmp = (strs: string[]): string[][] => {
-   return Array<Array<string>>();
+   // HashMap       key: [eat tea]
+   //								      1e, 1a, 1t
+
+   const anaGroup = new YAMap();
+   for(const str of strs) {
+	  const count = Array.from({length: 26}, _ => 0);
+
+	  for(const idx of [...new Range(str.length)])
+		 count[str.charCodeAt(idx) - "a".charCodeAt(0)] += 1;
+	  if(!anaGroup.has(count))
+		 anaGroup.set(count, [str]);
+	  else anaGroup.set(count, [str, ...anaGroup.get(count)]);
+   }
+   return [...anaGroup.values];
 };
 
 export const groupAnagrams = { SortCmp, MapCmp };
