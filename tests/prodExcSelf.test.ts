@@ -19,8 +19,13 @@ describe("An array of numbers.", () => {
 		 prodExcSelf.Cmp(inputs[0]),
 	     prodExcSelf.Cmp(inputs[1])
 	  ];
-	  console.log(outputs[1], answers[0]);
-	  console.log(outputs[1], answers[1]);
    });
-   test("Should contain ${inputs[0]} elements", () => {});
+   describe("Compared", () => {
+	  test.todo("Should contain the correct number of elements.");
+	  test.todo("Should contain the correct elements.");
+   });
+   describe("Compared in Place", () => {
+	  test.todo("Should contain the correct number of elements.");
+	  test.todo("Should contain the correct elements.");
+   });
 });
