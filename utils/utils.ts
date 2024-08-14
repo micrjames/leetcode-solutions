@@ -11,4 +11,8 @@ const sortNums = (nums: number[], reverse: boolean): number[] => {
    return nums.sort((a, b) => a - b);
 };
 
-export const utils = { sortStrtoArr, sortStr, sortNums };
+const populateArray = (size: number, element: number): Array<number> => Array.from({length: size}, _ => element);
+
+const range = (size: number): Array<number> => Array.from({length: size}, (_, idx) => idx);
+
+export const utils = { sortStrtoArr, sortStr, sortNums, populateArray, range };
