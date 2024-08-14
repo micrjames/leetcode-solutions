@@ -1,5 +1,5 @@
 import { groupAnagrams } from "../arrays&hashing/groupAnagrams";
-import { Range } from "../../range/range";
+import { Range } from "../range/range";
 
 describe("An array of strings.", () => {
    let inputs: string[][];

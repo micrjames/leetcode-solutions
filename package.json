@@ -7,7 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+	"postinstall": "git clone git@github.com:micrjames/YAMap && git clone git@github.com:micrjames/YASet && git clone git@github.com:micrjames/range && cd YAMap && npm i && cd ../YASet && npm i"
   },
   "keywords": [],
   "author": "",

@@ -27,7 +27,7 @@ const SortCmp = (nums: number[]): boolean => {
    return false;
 };
 //	c. HashSet &compare
-import { YASet } from "../../YASet/YASet";
+import { YASet } from "../YASet/YASet";
 
 const SetCmp = (nums: number[]): boolean => {
    const numsSet = new YASet();

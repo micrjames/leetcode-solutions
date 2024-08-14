@@ -1,5 +1,5 @@
 import { utils } from "../utils/utils";
-import { Range } from "../../range/range";
+import { Range } from "../range/range";
 import { YAMap } from "../../YAMap/YAMap";
 
 // 49. Group Anagrams

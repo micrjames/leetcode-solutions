@@ -1,5 +1,5 @@
 import { containsDuplicate } from "../arrays&hashing/containsDuplicate";
-import { Range } from "../../range/range";
+import { Range } from "../range/range";
 
 describe("An array.", () => {
    let arr: number[] = [];
