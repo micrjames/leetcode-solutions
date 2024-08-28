@@ -13,7 +13,7 @@ const SortCmp = (s: string, t: string): boolean  => {
 };
 
 // b. map & compare
-import { YAMap } from "../../YAMap/YAMap";
+import { YAMap } from "../YAMap/YAMap";
 const mapChars = (str: string, map: YAMap) => {
    for(const c of str) {
 	  if(map.has(c)) {
